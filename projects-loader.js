@@ -7,10 +7,10 @@ const projects = [
         thumbnail: "projects/template/images/0130.png"
     },
     {
-        name: "260130_Beautiful Crash",
+        name: "123",
         description: "請輸入專案描述",
-        folder: "260130_Beautiful Crash",
-        thumbnail: "projects/260130_Beautiful Crash/images/260131.png"
+        folder: "123",
+        thumbnail: "projects/123/images/260131.png"
     }
 ];
 

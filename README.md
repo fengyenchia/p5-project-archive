@@ -40,6 +40,9 @@ p5-project-archive/
 ├── index.html              # 主頁面
 ├── style.css              # 樣式表
 ├── projects-loader.js     # 專案載入腳本
+├── lib/                   # 共用函式庫資料夾
+│   ├── p5.min.js         # p5.js 函式庫（需自行下載）
+│   └── README.md         # 函式庫下載說明
 ├── projects/              # 專案資料夾
 │   ├── colorful-circles/  # 範例專案 1
 │   │   ├── index.html
@@ -54,10 +57,18 @@ p5-project-archive/
 
 此 repository 包含兩個範例專案：
 
-1. **彩色圓圈** - 互動式彩色圓圈動畫
+1. **黑白圓圈** - 互動式黑白圓圈動畫
 2. **粒子系統** - 動態粒子效果
 
-> **注意**: 範例專案使用 CDN 載入 p5.js 函式庫。如需離線使用，請從 [p5.js 官網](https://p5js.org/download/) 下載函式庫並更新專案中的引用路徑。
+## p5.js 函式庫
+
+專案使用共用的 p5.js 函式庫，位於 `lib/` 資料夾中。所有專案的 index.html 都引用此共用函式庫：
+
+```html
+<script src="../../lib/p5.min.js"></script>
+```
+
+> **重要**: 請從 [p5.js 官網](https://p5js.org/download/) 或 [GitHub Releases](https://github.com/processing/p5.js/releases/download/v1.7.0/p5.min.js) 下載 `p5.min.js` 並放置於 `lib/` 資料夾中。或者，您也可以將 script src 改回 CDN 連結以使用線上版本。
 
 ## 技術棧
 

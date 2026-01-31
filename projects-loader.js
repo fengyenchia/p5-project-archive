@@ -1,16 +1,16 @@
 // Configuration: Add your p5.js projects here
 const projects = [
     {
-        name: "黑白圓圈",
-        description: "互動式黑白圓圈動畫，跟隨滑鼠移動",
+        name: "Template",
+        description: "專案描述",
         folder: "template",
         thumbnail: "projects/template/images/0130.png"
     },
     {
-        name: "123",
+        name: "260130_Beautiful Crash",
         description: "請輸入專案描述",
-        folder: "123",
-        thumbnail: "projects/123/images/0130.png"
+        folder: "260130_Beautiful Crash",
+        thumbnail: "projects/260130_Beautiful Crash/images/260131.png"
     }
 ];
 

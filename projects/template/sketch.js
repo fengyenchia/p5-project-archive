@@ -22,7 +22,6 @@ async function setup() {
 	createCanvas(targetCanvasWidth, targetCanvasHeight);
 	SetupCanvasScale();
 	flex();
-	pixelDensity(1);
 
 	mainHue = random(0, 360);
 	noLoop();

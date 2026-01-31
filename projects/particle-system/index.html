@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>粒子系統 - p5.js</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js" integrity="sha512-bcfltY+lNLJWs2vn40A5TH/z/WH5V/fLsYVjMfL/Vm+ycEph4wkg87dHpmliXPDAMYtBQ8lALJ2NqASbSjK2rQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+        main {
+            text-align: center;
+        }
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background: #000000;
+            border: 2px solid #000000;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            color: #ffffff;
+            z-index: 1000;
+        }
+        .back-button:hover {
+            background: #ffffff;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <a href="../../index.html" class="back-button">← 返回</a>
+    <main>
+        <script src="sketch.js"></script>
+    </main>
+</body>
+</html>

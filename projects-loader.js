@@ -1,16 +1,16 @@
 // Configuration: Add your p5.js projects here
 const projects = [
     {
-        name: "Template",
-        description: "專案描述",
-        folder: "template",
-        thumbnail: "projects/template/images/0130.png"
+        name: "260130",
+        description: "Beautiful Crash | GENUARY 30, 2026 - Its not a bug, its a feature.",
+        folder: "260130",
+        thumbnail: "projects/260130/images/260130.png"
     },
     {
-        name: "123",
-        description: "請輸入專案描述",
-        folder: "123",
-        thumbnail: "projects/123/images/260131.png"
+        name: "Template",
+        description: "專案主題與描述",
+        folder: "template",
+        thumbnail: "projects/template/images/0130.png"
     }
 ];
 

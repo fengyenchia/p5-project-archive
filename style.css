@@ -32,7 +32,7 @@ header p {
 
 main {
     max-width: 1200px;
-    margin: 2rem auto;
+    margin: 2rem 1rem;
     padding: 0 1rem;
 }
 
@@ -108,13 +108,68 @@ main {
     color: #000000;
 }
 
-footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    background: #ffffff;
-    color: #000000;
+.site-footer {
     margin-top: 2rem;
     border-top: 2px solid #000000;
+    background: #ffffff;
+    color: #000000;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.footer-title {
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    /* border: 0px; */
+    color: #000000;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.footer-links a:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+.footer-links i {
+    font-size: 20px;
+}
+
+.footer-email {
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+    transition: border-color 0.2s ease;
+}
+
+.footer-email:hover {
+    border-color: #000000;
 }
 
 #projects-container {
@@ -129,5 +184,14 @@ footer {
     
     .gallery {
         grid-template-columns: 1fr;
+    }
+
+    .footer-links {
+        gap: 0.75rem;
+    }
+
+    .footer-links a {
+        width: 36px;
+        height: 36px;
     }
 }

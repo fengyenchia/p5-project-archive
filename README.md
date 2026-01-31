@@ -41,8 +41,8 @@ p5-project-archive/
 ├── style.css              # 樣式表
 ├── projects-loader.js     # 專案載入腳本
 ├── lib/                   # 共用函式庫資料夾
-│   ├── p5.min.js         # p5.js 函式庫（需自行下載）
-│   └── README.md         # 函式庫下載說明
+│   ├── p5.min.js         # p5.js 函式庫（已包含）
+│   └── README.md         # 函式庫說明
 ├── projects/              # 專案資料夾
 │   ├── colorful-circles/  # 範例專案 1
 │   │   ├── index.html
@@ -62,13 +62,15 @@ p5-project-archive/
 
 ## p5.js 函式庫
 
-專案使用共用的 p5.js 函式庫，位於 `lib/` 資料夾中。所有專案的 index.html 都引用此共用函式庫：
+專案使用共用的 p5.js 函式庫 (v1.7.0)，位於 `lib/` 資料夾中。所有專案的 index.html 都引用此共用函式庫：
 
 ```html
 <script src="../../lib/p5.min.js"></script>
 ```
 
-> **重要**: 請從 [p5.js 官網](https://p5js.org/download/) 或 [GitHub Releases](https://github.com/processing/p5.js/releases/download/v1.7.0/p5.min.js) 下載 `p5.min.js` 並放置於 `lib/` 資料夾中。或者，您也可以將 script src 改回 CDN 連結以使用線上版本。
+這樣可以避免在每個專案中重複存放 p5.js 檔案，節省空間並方便統一管理和更新。
+
+> **注意**: 如果需要更新 p5.js 版本，請從 [p5.js 官網](https://p5js.org/download/) 或 [GitHub Releases](https://github.com/processing/p5.js/releases/) 下載新版本並替換 `lib/p5.min.js` 檔案。所有專案都會自動使用新版本。
 
 ## 技術棧
 

@@ -33,6 +33,21 @@ const projects = [
 ];
 ```
 
+### 2-1. 使用終端指令快速新增專案
+
+你可以使用指令自動複製 `template` 並更新 `projects-loader.js`：
+
+```
+node create-project.js <專案資料夾名稱> --name "專案名稱" --desc "專案描述" --thumb "縮圖路徑"
+```
+
+參數說明：
+
+- `<專案資料夾名稱>`：必填，會建立在 `projects/` 底下
+- `--name`：選填，未填會使用資料夾名稱
+- `--desc`：選填，預設為「請輸入專案描述」
+- `--thumb`：選填，預設為 `projects/<專案資料夾名稱>/images/0130.png`
+
 ### 3. 專案結構
 
 ```

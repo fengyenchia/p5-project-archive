@@ -4,7 +4,13 @@ const projects = [
         name: "黑白圓圈",
         description: "互動式黑白圓圈動畫，跟隨滑鼠移動",
         folder: "template",
-        icon: "⚫"
+        thumbnail: "projects/template/images/0130.png"
+    },
+    {
+        name: "123",
+        description: "請輸入專案描述",
+        folder: "123",
+        thumbnail: "projects/123/images/0130.png"
     }
 ];
 
@@ -18,7 +24,7 @@ function loadProjects() {
         
         card.innerHTML = `
             <div class="project-preview">
-                <span>${project.icon}</span>
+                <img src="${project.thumbnail}" alt="${project.name} 作品縮圖">
             </div>
             <div class="project-info">
                 <h3>${project.name}</h3>

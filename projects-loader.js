@@ -17,11 +17,12 @@ const projects = [
 // Function to load projects
 function loadProjects() {
     const container = document.getElementById('projects-container');
-    
+
     projects.forEach(project => {
-        const card = document.createElement('div');
+        const card = document.createElement('a');
         card.className = 'project-card';
-        
+        card.href = `projects/${project.folder}/index.html`;
+
         card.innerHTML = `
             <div class="project-preview">
                 <img src="${project.thumbnail}" alt="${project.name} 作品縮圖">
@@ -29,10 +30,9 @@ function loadProjects() {
             <div class="project-info">
                 <h3>${project.name}</h3>
                 <p>${project.description}</p>
-                <a href="projects/${project.folder}/index.html" class="project-link">查看作品</a>
             </div>
         `;
-        
+
         container.appendChild(card);
     });
 }

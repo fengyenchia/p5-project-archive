@@ -2,20 +2,22 @@ let circles = [];
 
 function setup() {
     createCanvas(800, 600);
-    background(30);
+    background(255);
 }
 
 function draw() {
     // Fade effect
-    background(30, 30, 30, 25);
+    background(255, 255, 255, 25);
     
     // Add new circle at mouse position
     if (mouseIsPressed) {
+        // Use grayscale values for black and white theme
+        let grayValue = random(0, 255);
         let newCircle = {
             x: mouseX,
             y: mouseY,
             size: random(20, 60),
-            color: color(random(255), random(255), random(255), 200),
+            color: color(grayValue, 200),
             speedX: random(-2, 2),
             speedY: random(-2, 2)
         };
@@ -26,8 +28,9 @@ function draw() {
     for (let i = circles.length - 1; i >= 0; i--) {
         let c = circles[i];
         
-        // Draw circle
-        noStroke();
+        // Draw circle with stroke for 2D effect
+        stroke(0);
+        strokeWeight(2);
         fill(c.color);
         ellipse(c.x, c.y, c.size);
         
@@ -46,7 +49,8 @@ function draw() {
     }
     
     // Instructions
-    fill(255);
+    fill(0);
+    noStroke();
     textSize(16);
-    text('按住滑鼠拖曳來創造彩色圓圈', 10, 20);
+    text('按住滑鼠拖曳來創造黑白圓圈', 10, 20);
 }

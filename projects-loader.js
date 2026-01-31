@@ -1,16 +1,16 @@
 // Configuration: Add your p5.js projects here
 const projects = [
     {
-        name: "彩色圓圈",
-        description: "互動式彩色圓圈動畫，跟隨滑鼠移動",
+        name: "黑白圓圈",
+        description: "互動式黑白圓圈動畫，跟隨滑鼠移動",
         folder: "colorful-circles",
-        icon: "🎨"
+        icon: "⚫"
     },
     {
         name: "粒子系統",
         description: "動態粒子效果，展示物理模擬",
         folder: "particle-system",
-        icon: "✨"
+        icon: "⚪"
     }
 ];
 

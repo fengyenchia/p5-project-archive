@@ -7,7 +7,8 @@ class Particle {
         this.acc = createVector(0, 0.05);
         this.lifetime = 255;
         this.size = random(5, 15);
-        this.color = color(random(100, 255), random(100, 255), random(200, 255));
+        // Use grayscale for black and white theme
+        this.gray = random(0, 255);
     }
     
     update() {
@@ -20,13 +21,11 @@ class Particle {
     }
     
     show() {
-        noStroke();
-        fill(red(this.color), green(this.color), blue(this.color), this.lifetime);
+        // Draw with stroke for 2D effect
+        stroke(0);
+        strokeWeight(1);
+        fill(this.gray, this.lifetime);
         ellipse(this.pos.x, this.pos.y, this.size);
-        
-        // Add glow effect
-        fill(red(this.color), green(this.color), blue(this.color), this.lifetime / 2);
-        ellipse(this.pos.x, this.pos.y, this.size * 1.5);
     }
     
     isDead() {
@@ -39,7 +38,7 @@ function setup() {
 }
 
 function draw() {
-    background(10, 10, 20, 50);
+    background(255, 255, 255, 50);
     
     // Create new particles at mouse position
     if (mouseIsPressed) {
@@ -59,7 +58,8 @@ function draw() {
     }
     
     // Instructions
-    fill(255);
+    fill(0);
+    noStroke();
     textSize(16);
     text('按住滑鼠拖曳來創造粒子效果', 10, 20);
     text('粒子數量: ' + particles.length, 10, 40);

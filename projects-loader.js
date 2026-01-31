@@ -3,14 +3,8 @@ const projects = [
     {
         name: "黑白圓圈",
         description: "互動式黑白圓圈動畫，跟隨滑鼠移動",
-        folder: "colorful-circles",
+        folder: "template",
         icon: "⚫"
-    },
-    {
-        name: "粒子系統",
-        description: "動態粒子效果，展示物理模擬",
-        folder: "particle-system",
-        icon: "⚪"
     }
 ];
 
@@ -29,7 +23,7 @@ function loadProjects() {
             <div class="project-info">
                 <h3>${project.name}</h3>
                 <p>${project.description}</p>
-                <a href="projects/${project.folder}/index.html" class="project-link" target="_blank">查看作品</a>
+                <a href="projects/${project.folder}/index.html" class="project-link">查看作品</a>
             </div>
         `;
         

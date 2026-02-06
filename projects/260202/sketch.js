@@ -270,13 +270,14 @@ class Building {
 				vertex(x3, y3);
 				vertex(x4, y4);
 				endShape(CLOSE);
+				drawingContext.filter = 'none';
 				pop();
 			}
 		}
 	}
 }
 
-async function setup() {
+function setup() {
 	createCanvas(targetCanvasWidth, targetCanvasHeight);
 	SetupCanvasScale();
 	flex();
@@ -284,7 +285,7 @@ async function setup() {
 }
 
 let mainColor, myColorMode;
-async function draw() {
+function draw() {
 	colorMode(HSB, 360, 100, 100, 100);
 	background(0, 0, 20, 100);
 
@@ -511,6 +512,7 @@ function myMoon(x, y, size, isFull) {
 		let offsetY = offset * sin(angle);
 		circle(-offsetX, -offsetY, size);
 	}
+	drawingContext.filter = 'none';
 	pop();
 }
 
@@ -533,9 +535,4 @@ function myWire(p1, p2, p3, p4) {
 	noFill();
 	bezier(p1.x, p1.y, p2.x, p2.y, p3.x, p3.y, p4.x, p4.y);
 	pop();
-}
-// -----------------------------------------------------
-
-function sleep(ms) {
-	return new Promise(resolve => setTimeout(resolve, ms));
 }

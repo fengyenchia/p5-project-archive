@@ -1,0 +1,2 @@
+## EditArt Fun p5.js template
+You can use the template to develop EditArt Fun projects. When you are done, you can copy the contents of `index.js` into [the online editor](https://www.editart.xyz/fun).

@@ -6,6 +6,67 @@ drawingContext.shadowOffsetY = 0;
 drawingContext.shadowBlur = 6;
 ```
 
+### drawingContext.filter 濾鏡
+
+**效能消耗：** blur 濾鏡最吃效能，在 draw() 迴圈中大量使用會導致掉幀。
+**重置方式：** 除了 push()、pop() 之外，也可以直接執行 drawingContext.filter = 'none';。
+**使用位置：** 先寫濾鏡，再寫顏色
+```javascript
+// 亮度 (Brightness)
+// 數值：0 (全黑) 到 1 (原狀)，1 以上更亮。
+drawingContext.filter = 'brightness(0.5)';
+
+// 模糊 (Blur)
+// 數值：0px 以上，數值越大越模糊。
+drawingContext.filter = 'blur(10px)';
+
+// 對比度 (Contrast)
+// 數值：0 (全灰) 到 1 (原狀)，1 以上對比更強。
+drawingContext.filter = 'contrast(2)';
+
+// 灰階 (Grayscale)
+// 數值：0 (原狀) 到 1 (完全黑白)。
+drawingContext.filter = 'grayscale(1)';
+
+// 色相旋轉 (Hue-rotate)
+// 數值：0deg 到 360deg (旋轉一圈顏色回到原點)。
+drawingContext.filter = 'hue-rotate(180deg)';
+
+// 負片 (Invert)
+// 數值：0 (原狀) 到 1 (完全反相)。
+drawingContext.filter = 'invert(1)';
+
+// 飽和度 (Saturate)
+// 數值：0 (完全無色) 到 1 (原狀)，1 以上顏色更鮮豔。
+drawingContext.filter = 'saturate(3)';
+
+// 懷舊色 (Sepia)
+// 數值：0 (原狀) 到 1 (完全深褐色)。
+drawingContext.filter = 'sepia(0.8)';
+
+// 陰影 (Drop-shadow)
+// 數值：(水平位移 垂直位移 模糊半徑 顏色)。
+drawingContext.filter = 'drop-shadow(5px 5px 2px #000)';
+
+// 不透明度 (Opacity)
+// 數值：0 (全透明) 到 1 (不透明)。
+drawingContext.filter = 'opacity(0.5)';
+
+// -------------------------------------------------------------
+// 常見組合範例
+
+// 復古電影感：'sepia(0.8) contrast(1.2) brightness(0.9)'
+// 霓虹發光感：'blur(2px) saturate(2) brightness(1.5)'
+// 剪影效果：'brightness(0) invert(1)'
+// 柔焦效果：'blur(1px) contrast(1.1)'
+```
+
+
+### 圓角描邊
+```javascript
+strokeJoin(ROUND);
+```
+
 
 ### 顏色色票
 ```javascript

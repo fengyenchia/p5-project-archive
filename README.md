@@ -19,7 +19,7 @@
 
 ### 2. 新增專案
 
-#### 方法一：使用終端指令
+#### 使用終端指令
 
 使用 `create-project.js` 指令自動複製 `template` 並更新 `projects-loader.js`：
 
@@ -38,7 +38,7 @@ node create-project.js <專案資料夾名稱> --name "專案名稱" --desc "專
 node create-project.js 260131 --name "260131" --desc "Beautiful Art | GENUARY 31, 2026"
 ```
 
-#### 方法二：手動新增
+<!-- #### 方法二：手動新增
 
 1. 在 `projects/` 資料夾中創建新的專案資料夾
 2. 在該資料夾中放入你的 p5.js 專案檔案（index.html 和 sketch.js）
@@ -54,7 +54,7 @@ const projects = [
         thumbnail: "projects/your-project-folder/images/thumbnail.png"
     }
 ];
-```
+``` -->
 
 ### 3. 專案結構
 
@@ -112,6 +112,7 @@ p5-project-archive/
 ```
 
 > **注意**: 如果需要更新 p5.js 版本，請從 [p5.js 官網](https://p5js.org/download/) 或 [GitHub Releases](https://github.com/processing/p5.js/releases/) 下載新版本並替換 `lib/p5.min.js` 檔案。
+
 ## 設計風格
 
 - **配色**：黑白極簡風格，使用 `#000000` 與 `#ffffff`
